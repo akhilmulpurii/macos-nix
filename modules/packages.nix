@@ -11,5 +11,9 @@
     pkgs.fzf
     pkgs.eza
     pkgs.bat
+    pkgs.delta
+    pkgs.lazygit
+    pkgs.ripgrep
+    pkgs.fd
   ];
 }
