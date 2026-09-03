@@ -15,6 +15,8 @@
       "chatgpt"
       "helium-browser"
       "zennotes/tap/zennotes"
+      "ghostty"
+      "raycast"
     ];
     masApps = {
       # "WhatsApp" = 310633997;
