@@ -31,6 +31,9 @@
 	masApps = {
          "WhatsApp" = 310633997;
 	};
+	onActivation.cleanup = "zap";
+	onActivation.autoUpdate = true;
+	onActivation.upgrade = true;
       };
 
       nixpkgs.config.allowUnfree = true;
