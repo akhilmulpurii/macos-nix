@@ -3,8 +3,13 @@
   environment.systemPackages = [
     pkgs.tmux
     pkgs.neovim
+    pkgs.fish
     pkgs.nixd
     pkgs.nil
-    pkgs.fish
+    pkgs.starship
+    pkgs.zoxide
+    pkgs.fzf
+    pkgs.eza
+    pkgs.bat
   ];
 }
