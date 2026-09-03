@@ -15,5 +15,7 @@
     pkgs.lazygit
     pkgs.ripgrep
     pkgs.fd
+    pkgs.zoxide
+    pkgs.fzf
   ];
 }
