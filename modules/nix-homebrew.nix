@@ -4,7 +4,7 @@
     enable = true;
     enableRosetta = true;
     user = "akhil";
-    mutableTaps = false;
+    mutableTaps = true;
     trust = {
       formulae = [ ];
       casks = [ ];

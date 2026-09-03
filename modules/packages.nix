@@ -4,5 +4,7 @@
     pkgs.alacritty
     pkgs.tmux
     pkgs.neovim
+    pkgs.nixd
+    pkgs.nil
   ];
 }

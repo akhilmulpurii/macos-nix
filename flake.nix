@@ -20,7 +20,6 @@
         ./modules/homebrew.nix
         nix-homebrew.darwinModules.nix-homebrew
         ./modules/nix-homebrew.nix
-        ./modules/homebrew-taps.nix
       ];
     };
   };
