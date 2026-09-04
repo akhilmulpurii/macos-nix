@@ -17,5 +17,7 @@
     pkgs.fd
     pkgs.zoxide
     pkgs.fzf
+    pkgs.utm
+    pkgs.nodejs
   ];
 }
