@@ -19,5 +19,7 @@
     pkgs.fzf
     pkgs.utm
     pkgs.nodejs
+    pkgs.chatgpt
+    pkgs.zed-editor
   ];
 }

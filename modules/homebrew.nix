@@ -10,9 +10,7 @@
     ];
     casks = [
       "iina"
-      "zed"
       "claude"
-      "chatgpt"
       "helium-browser"
       "zennotes/tap/zennotes"
       "ghostty"
