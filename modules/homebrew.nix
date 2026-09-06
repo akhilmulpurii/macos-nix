@@ -15,9 +15,9 @@
       "zennotes/tap/zennotes"
       "ghostty"
       "raycast"
-      "stats"
       "jordanbaird-ice"
       "notchnook"
+      "twingate"
     ];
     masApps = {
       # "WhatsApp" = 310633997;

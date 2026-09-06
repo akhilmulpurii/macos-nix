@@ -22,5 +22,7 @@
     pkgs.chatgpt
     pkgs.zed-editor
     pkgs.ffmpeg
+    pkgs.cmatrix
+    pkgs.cava
   ];
 }
