@@ -21,5 +21,6 @@
     pkgs.nodejs
     pkgs.chatgpt
     pkgs.zed-editor
+    pkgs.ffmpeg
   ];
 }
