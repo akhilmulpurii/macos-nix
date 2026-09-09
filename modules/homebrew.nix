@@ -18,6 +18,8 @@
       "jordanbaird-ice"
       "notchnook"
       "twingate"
+      "bitwarden"
+      "github-copilot-app"
     ];
     masApps = {
       # "WhatsApp" = 310633997;
