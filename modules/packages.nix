@@ -24,5 +24,7 @@
     pkgs.ffmpeg
     pkgs.cmatrix
     pkgs.cava
+    pkgs.btop
+    pkgs.fastfetch
   ];
 }
