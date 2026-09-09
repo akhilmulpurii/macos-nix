@@ -19,6 +19,7 @@
         ./modules/fonts.nix
         ./modules/homebrew.nix
         ./modules/shell.nix
+        ./modules/dotfiles.nix
         nix-homebrew.darwinModules.nix-homebrew
         ./modules/nix-homebrew.nix
       ];

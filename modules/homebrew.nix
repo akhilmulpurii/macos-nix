@@ -4,9 +4,15 @@
     enable = true;
     brews = [
       # "mas"
+      "asmvik/formulae/yabai"
+      "asmvik/formulae/skhd"
+      { name = "felixkratz/formulae/sketchybar"; start_service = true; restart_service = "changed"; }
+      "felixkratz/formulae/borders"
     ];
     taps = [
       "zennotes/tap"
+      "asmvik/formulae"
+      "felixkratz/formulae"
     ];
     casks = [
       "iina"
