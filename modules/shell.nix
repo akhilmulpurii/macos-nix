@@ -5,8 +5,8 @@
     shellAliases = {
       rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#Valhalla";
       nixcfg = "cd /etc/nix-darwin && nvim flake.nix";
-      ls = "eza --icons";
-      ll = "eza -la --icons";
+      ls = "eza --icons=auto";
+      ll = "eza -la --icons=auto";
       cat = "bat";
       ghostty = "/Applications/Ghostty.app/Contents/MacOS/ghostty";
     };

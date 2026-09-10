@@ -20,6 +20,8 @@
       "twingate"
       "bitwarden"
       "github-copilot-app"
+      "discord"
+      "motrix"
     ];
     masApps = {
       # "WhatsApp" = 310633997;
