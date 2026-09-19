@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, username, hostname, ... }:
 {
   programs.fish = {
     enable = true;
     shellAliases = {
-      rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#Valhalla";
+      rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#${hostname}";
       nixcfg = "cd /etc/nix-darwin && nvim flake.nix";
       ls = "eza --icons=auto";
       ll = "eza -la --icons=auto";
@@ -17,5 +17,5 @@
     '';
   };
   environment.shells = [ pkgs.fish ];
-  users.users.akhil.shell = pkgs.fish;
+  users.users.${username}.shell = pkgs.fish;
 }
