@@ -12,8 +12,10 @@
     let
       hostName = builtins.getEnv "NIX_HOSTNAME";
       userName = builtins.getEnv "NIX_USERNAME";
-      effectiveHostName = if hostName == "" then "Valhalla" else hostName;
-      effectiveUserName = if userName == "" then "akhil" else userName;
+      # Replace this in your .env file
+      # hostName == "" || "" kind of syntax for below line
+      effectiveHostName = if hostName == "" then "" else hostName;
+      effectiveUserName = if userName == "" then "" else userName;
     in
     {
       darwinConfigurations.${effectiveHostName} = nix-darwin.lib.darwinSystem {
