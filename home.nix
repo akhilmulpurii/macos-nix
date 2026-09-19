@@ -1,7 +1,9 @@
 { pkgs, ... }:
 let
+  user = builtins.getEnv "NIX_USERNAME";
   gitName = builtins.getEnv "GIT_NAME";
   gitEmail = builtins.getEnv "GIT_EMAIL";
+  effectiveUser = if user == "" then "akhil" else user;
   effectiveGitName = if gitName == "" then "Akhil Mulpurii" else gitName;
   effectiveGitEmail = if gitEmail == "" then "akhil@example.com" else gitEmail;
 in
