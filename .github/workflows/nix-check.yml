@@ -1,0 +1,25 @@
+name: Nix Flake Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  flake-check:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    env:
+      NIX_USERNAME: ci-user
+      NIX_HOSTNAME: ci-host
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Validate flake
+        run: nix --extra-experimental-features "nix-command flakes" flake check --no-write-lock-file
