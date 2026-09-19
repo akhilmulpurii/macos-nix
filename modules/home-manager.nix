@@ -1,12 +1,12 @@
-{ username, ... }:
+{ lib, username, ... }:
 {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     users.${username} = {
       imports = [ ../home.nix ];
-      home.username = username;
-      home.homeDirectory = "/Users/${username}";
+      home.username = lib.mkForce username;
+      home.homeDirectory = lib.mkForce "/Users/${username}";
     };
   };
 }
