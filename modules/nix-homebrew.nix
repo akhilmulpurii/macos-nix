@@ -1,9 +1,9 @@
-{ ... }:
+{ username, ... }:
 {
   nix-homebrew = {
     enable = true;
     enableRosetta = true;
-    user = "akhil";
+    user = username;
     mutableTaps = true;
     trust = {
       formulae = [ ];
