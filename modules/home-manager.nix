@@ -3,6 +3,10 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.${username} = import ../home.nix;
+    users.${username} = {
+      imports = [ ../home.nix ];
+      home.username = username;
+      home.homeDirectory = "/Users/${username}";
+    };
   };
 }
