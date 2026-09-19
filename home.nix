@@ -1,8 +1,30 @@
 { pkgs, username, ... }:
+let
+  gitName = builtins.getEnv "GIT_NAME";
+  gitEmail = builtins.getEnv "GIT_EMAIL";
+  effectiveGitName = if gitName == "" then "Akhil Mulpurii" else gitName;
+  effectiveGitEmail = if gitEmail == "" then "akhil@example.com" else gitEmail;
+in
 {
   home.username = username;
   home.homeDirectory = "/Users/${username}";
   home.stateVersion = "24.11";
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
+
+  xdg.configFile = {
+    "tmux/tmux.conf".source = ./dotfiles/tmux/tmux.conf;
+    "nvim/init.lua".source = ./dotfiles/nvim/init.lua;
+    "ghostty/config".source = ./dotfiles/ghostty/config;
+    "starship.toml".source = ./dotfiles/starship.toml;
+  };
+
+  home.file = {
+    ".gitignore_global".source = ./dotfiles/gitignore_global;
+  };
 
   programs.fish = {
     enable = true;
@@ -28,8 +50,11 @@
 
   programs.git = {
     enable = true;
+    userName = effectiveGitName;
+    userEmail = effectiveGitEmail;
     extraConfig = {
       init.defaultBranch = "main";
+      core.excludesfile = "/Users/${username}/.gitignore_global";
     };
   };
 
@@ -43,5 +68,7 @@
     pkgs.lazygit
     pkgs.fastfetch
     pkgs.btop
+    pkgs.tmux
+    pkgs.neovim
   ];
 }

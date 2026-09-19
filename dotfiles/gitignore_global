@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# editor swap files
+*.swp
+*.swo
+
+# logs
+*.log
+
+# nix result symlinks
+result
