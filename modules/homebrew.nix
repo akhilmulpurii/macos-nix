@@ -4,6 +4,7 @@
     enable = true;
     brews = [
       # "mas"
+      "container"
     ];
     taps = [
       "zennotes/tap"
@@ -21,7 +22,10 @@
       "bitwarden"
       "github-copilot-app"
       "discord"
-      "motrix"
+      "balenaetcher"
+      "moonlight"
+      "obs"
+      "copilot-cli"
     ];
     masApps = {
       # "WhatsApp" = 310633997;
