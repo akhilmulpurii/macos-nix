@@ -1,13 +1,15 @@
-{ pkgs, username, ... }:
+{ pkgs, ... }:
 let
+  user = builtins.getEnv "NIX_USERNAME";
   gitName = builtins.getEnv "GIT_NAME";
   gitEmail = builtins.getEnv "GIT_EMAIL";
+  effectiveUser = if user == "" then "akhil" else user;
   effectiveGitName = if gitName == "" then "Akhil Mulpurii" else gitName;
   effectiveGitEmail = if gitEmail == "" then "akhil@example.com" else gitEmail;
 in
 {
-  home.username = username;
-  home.homeDirectory = "/Users/${username}";
+  home.username = effectiveUser;
+  home.homeDirectory = "/Users/${effectiveUser}";
   home.stateVersion = "24.11";
 
   home.sessionVariables = {
@@ -54,7 +56,7 @@ in
     userEmail = effectiveGitEmail;
     extraConfig = {
       init.defaultBranch = "main";
-      core.excludesfile = "/Users/${username}/.gitignore_global";
+      core.excludesfile = "/Users/${effectiveUser}/.gitignore_global";
     };
   };
 
