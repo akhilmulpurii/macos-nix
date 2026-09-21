@@ -1,4 +1,4 @@
-format = "[\$username](bold cyan) in [$directory](bold blue)\n[$status](bold red) $character "
+format = "[$username](bold cyan) in [$directory](bold blue)\n[$status](bold red) $character "
 right_format = "[$time](bold purple)"
 
 [character]
