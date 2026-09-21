@@ -77,6 +77,7 @@ The profile defaults to `core` when `NIX_PROFILE` is unset or unsupported.
 
 Home Manager installs the tracked configuration files into the user home directory:
 
+- `dotfiles/fish/config.fish` -> `~/.config/fish/config.fish`
 - `dotfiles/ghostty/config` -> `~/.config/ghostty/config`
 - `dotfiles/nvim/init.lua` -> `~/.config/nvim/init.lua`
 - `dotfiles/starship.toml` -> `~/.config/starship.toml`
