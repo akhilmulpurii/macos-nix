@@ -11,6 +11,13 @@ Declarative macOS configuration using [nix-darwin](https://github.com/nix-darwin
 
 The flake also manages Homebrew through `nix-homebrew`. Homebrew itself does not need to be installed separately.
 
+On Apple Silicon, install Rosetta before the first rebuild so the Intel Homebrew
+prefix can be used without warnings:
+
+```sh
+softwareupdate --install-rosetta
+```
+
 ## Configure your identity
 
 Copy the example environment file and edit the values for your machine:
