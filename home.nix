@@ -14,7 +14,6 @@ in
   };
 
   xdg.configFile = {
-    "fish/config.fish".source = ./dotfiles/fish/config.fish;
     "tmux/tmux.conf".source = ./dotfiles/tmux/tmux.conf;
     "nvim/init.lua".source = ./dotfiles/nvim/init.lua;
     "ghostty/config".source = ./dotfiles/ghostty/config;
@@ -27,6 +26,19 @@ in
 
   programs.fish = {
     enable = true;
+    shellAliases = {
+      rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin";
+      nixcfg = "cd /etc/nix-darwin && nvim flake.nix";
+      ls = "eza --icons=auto";
+      ll = "eza -la --icons=auto";
+      cat = "bat";
+      ghostty = "/Applications/Ghostty.app/Contents/MacOS/ghostty";
+    };
+    interactiveShellInit = ''
+      set -g fish_greeting
+      zoxide init fish --cmd cd | source
+      fzf --fish | source
+    '';
   };
 
   programs.starship = {
