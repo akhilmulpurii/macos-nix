@@ -48,9 +48,9 @@ in
 
   programs.git = {
     enable = true;
-    userName = effectiveGitName;
-    userEmail = effectiveGitEmail;
-    extraConfig = {
+    settings = {
+      user.name = effectiveGitName;
+      user.email = effectiveGitEmail;
       init.defaultBranch = "main";
       core.excludesfile = "/Users/${username}/.gitignore_global";
     };
