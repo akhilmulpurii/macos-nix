@@ -1,0 +1,9 @@
+format = "[\$username](bold cyan) in [$directory](bold blue)\n[$status](bold red) $character "
+right_format = "[$time](bold purple)"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[git_status]
+format = '([$ahead_behind]($style) )[$all_status$ahead_behind]($style)'

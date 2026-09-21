@@ -1,8 +1,8 @@
 { pkgs, ... }:
 {
   environment.systemPackages = [
-    pkgs.fish
-    pkgs.cmatrix
-    pkgs.cava
+    pkgs.utm
+    pkgs.chatgpt
+    pkgs.ffmpeg
   ];
 }
