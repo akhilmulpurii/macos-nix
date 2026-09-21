@@ -30,6 +30,7 @@ in
       source = ./dotfiles/starship.toml;
       force = true;
     };
+    "fish/config.fish".force = true;
   };
 
   home.file = {

@@ -16,7 +16,6 @@
       fzf --fish | source
     '';
   };
-  xdg.configFile."fish/config.fish".force = true;
   environment.shells = [ pkgs.fish ];
   users.users.${username}.shell = pkgs.fish;
 }
