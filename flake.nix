@@ -18,8 +18,8 @@
       effectiveHostName = if hostName == "" then "Valhalla" else hostName;
       effectiveUserName = if userName == "" then "akhil" else userName;
       effectiveProfile = if profileName == "" then "core" else profileName;
-      supportedProfiles = [ "core" "dev" "creative" ];
-      selectedProfile = if builtins.elem effectiveProfile supportedProfiles then effectiveProfile else "core";
+      profiles = [ "core" "dev" "creative" ];
+      selectedProfile = if builtins.elem effectiveProfile profiles then effectiveProfile else builtins.head profiles;
     in
     {
       darwinConfigurations.${effectiveHostName} = nix-darwin.lib.darwinSystem {

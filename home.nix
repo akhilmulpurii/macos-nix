@@ -1,9 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 let
-  user = builtins.getEnv "NIX_USERNAME";
   gitName = builtins.getEnv "GIT_NAME";
   gitEmail = builtins.getEnv "GIT_EMAIL";
-  effectiveUser = if user == "" then "akhil" else user;
   effectiveGitName = if gitName == "" then "Akhil Mulpurii" else gitName;
   effectiveGitEmail = if gitEmail == "" then "akhil@example.com" else gitEmail;
 in
@@ -54,7 +52,7 @@ in
     userEmail = effectiveGitEmail;
     extraConfig = {
       init.defaultBranch = "main";
-      core.excludesfile = "/Users/${effectiveUser}/.gitignore_global";
+      core.excludesfile = "/Users/${username}/.gitignore_global";
     };
   };
 
@@ -68,6 +66,7 @@ in
     pkgs.lazygit
     pkgs.fastfetch
     pkgs.btop
+    pkgs.delta
     pkgs.tmux
     pkgs.neovim
   ];
