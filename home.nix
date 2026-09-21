@@ -14,10 +14,22 @@ in
   };
 
   xdg.configFile = {
-    "tmux/tmux.conf".source = ./dotfiles/tmux/tmux.conf;
-    "nvim/init.lua".source = ./dotfiles/nvim/init.lua;
-    "ghostty/config".source = ./dotfiles/ghostty/config;
-    "starship.toml".source = ./dotfiles/starship.toml;
+    "tmux/tmux.conf" = {
+      source = ./dotfiles/tmux/tmux.conf;
+      force = true;
+    };
+    "nvim/init.lua" = {
+      source = ./dotfiles/nvim/init.lua;
+      force = true;
+    };
+    "ghostty/config" = {
+      source = ./dotfiles/ghostty/config;
+      force = true;
+    };
+    "starship.toml" = {
+      source = ./dotfiles/starship.toml;
+      force = true;
+    };
   };
 
   home.file = {
