@@ -26,6 +26,8 @@
       "moonlight"
       "obs"
       "copilot-cli"
+      "chatgpt"
+      "zed"
     ];
     masApps = {
       # "WhatsApp" = 310633997;

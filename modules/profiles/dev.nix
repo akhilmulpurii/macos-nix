@@ -7,6 +7,5 @@
     pkgs.ripgrep
     pkgs.fd
     pkgs.nodejs
-    pkgs.zed-editor
   ];
 }
